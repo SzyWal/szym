@@ -7,6 +7,9 @@ window.addEventListener('load', () => {
     addKeyDownEventListener();
     setInterval(renderFrame, 100);
 
+
+// Moving and Apple orientation
+
     function renderFrame() {
         if (running) {
             if (nextMove.x !== -move.x || nextMove.y !== -move.y) {
@@ -33,9 +36,15 @@ window.addEventListener('load', () => {
         ctx.fillRect(apple.x * 20, apple.y * 20, 18, 18)
     }
 
+
+// Snake length
+
     function getHead() {
         return snake[snake.length - 1];
     }
+
+
+// Going throught border
 
     function processBound(xOrY) {
         if (xOrY > 19) {
@@ -46,6 +55,9 @@ window.addEventListener('load', () => {
         return xOrY;
     }
 
+
+// Snake default position
+
     function setDefault() {
         snake = [{ x: 10, y: 10 }];
         [move, nextMove] = Array(2).fill({ x: 0, y: 0 });
@@ -53,6 +65,9 @@ window.addEventListener('load', () => {
         running = false;
         apple = generateAppleLocation();
     }
+
+
+// Apple grenerate method
 
     function generateAppleLocation() {
         let location;
@@ -65,6 +80,9 @@ window.addEventListener('load', () => {
     function generateRandomNumber(max) {
         return Math.floor(Math.random() * (max + 1));
     }
+
+
+// Adding user moving
 
     function addKeyDownEventListener() {
         window.addEventListener('keydown', e => {
