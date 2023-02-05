@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
     setInterval(renderFrame, 100);
 
 
-// Moving and Apple orientation
+// Moving and Apple orientation.
 
     function renderFrame() {
         if (running) {
