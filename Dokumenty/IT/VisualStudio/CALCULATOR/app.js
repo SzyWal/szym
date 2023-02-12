@@ -20,13 +20,13 @@ function displayNumbers() {
 }
 
 function operate() {
-    if(currentNumber.innerHTML === '' && this.textContent === '-') {
+    if (currentNumber.innerHTML === '' && this.textContent === '-') {
         currentNumber.innerHTML = '-';
         return;
     } else if (currentNumber.innerHTML === '') {
         return;
     }
-    if(mathSight.innerHTML !== '') {
+    if (mathSight.innerHTML !== '') {
         showResult();
     }
     previousNumber.innerHTML = currentNumber.innerHTML;
@@ -35,27 +35,27 @@ function operate() {
 }
 
 function showResult() {
-    if(previousNumber.innerHTML === '' || currentNumber.innerHTML === '') return;
+    if (previousNumber.innerHTML === '' || currentNumber.innerHTML === '') return;
 
     let a = Number(currentNumber.innerHTML);
     let b = Number(previousNumber.innerHTML);
     let operator = mathSight.innerHTML;
 
-    switch(operator) {
+    switch (operator) {
         case '+':
-            result = a+b;
+            result = a + b;
             break;
         case '-':
-            result = b-a;
+            result = b - a;
             break;
         case 'x':
-            result = a*b;
+            result = a * b;
             break;
         case '/':
-            result = b/a;
+            result = b / a;
             break;
         case '2^':
-            result = b**a;
+            result = b ** a;
             break;
 
     }
@@ -66,14 +66,14 @@ function showResult() {
     mathSight.innerHTML = '';
 }
 
-function addToHistory () {
+function addToHistory() {
     const newHistoryItem = document.createElement('li');
     newHistoryItem.innerHTML = `$(currentNumber.innerGTML) $(mathSight.innerHTML) $(previousNumber.innerHTML)` = `$(result)`
 }
 
-function clearHistory () {
+function clearHistory() {
     calculatorHistory.textContent = '';
-    if (calculatorHistory.textContent ==='') {
+    if (calculatorHistory.textContent === '') {
         historyBtb.classList.remove('active');
     }
 }
