@@ -8,7 +8,7 @@ const clearButton = document.querySelector(".clearButton");
 const calculatorHistory = document.querySelector(".history");
 const historyBtb = document.querySelector(".history-btn");
 
-let result = ' ';
+let result = '';
 
 
 //comma 
@@ -33,7 +33,7 @@ function operate() {
     mathSight.innerHTML = this.textContent;
     currentNumber.innerHTML = '';
 }
-
+// show results
 function showResult() {
     if (previousNumber.innerHTML === '' || currentNumber.innerHTML === '') return;
 
