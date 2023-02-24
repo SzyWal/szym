@@ -70,7 +70,7 @@ function addToHistory() {
     const newHistoryItem = document.createElement('li');
     newHistoryItem.innerHTML = `$(currentNumber.innerGTML) $(mathSight.innerHTML) $(previousNumber.innerHTML)` = `$(result)`
 }
-
+// clear history
 function clearHistory() {
     calculatorHistory.textContent = '';
     if (calculatorHistory.textContent === '') {
