@@ -1,3 +1,14 @@
+Calculator
+const currentNumber = document.querySelector(".currentNumber");
+const previousNumber = document.querySelector(".previousNumber");
+const mathSight = document.querySelector(".mathSight");
+const numbersButtons = document.querySelectorAll(".numbers");
+const operatorsButtons = document.querySelectorAll(".operator");
+const equalsButton = document.querySelector(".equalsButton");
+const clearButton = document.querySelector(".clearButton");
+const calculatorHistory = document.querySelector(".history");
+const historyBtb = document.querySelector(".history-btn");
+=======
 const currentNumber = document.querySelector(".currentNumber")
 const previousNumber = document.querySelector(".previousNumber")
 const mathSight = document.querySelector(".mathSight")
@@ -7,6 +18,7 @@ const equalsButton = document.querySelector(".equalsButton")
 const clearButton = document.querySelector(".clearButton")
 const calculatorHistory = document.querySelector(".history")
 const historyBtb = document.querySelector(".history-btn")
+ main
 
 let result = '';
 
@@ -33,7 +45,11 @@ function operate() {
     mathSight.innerHTML = this.textContent;
     currentNumber.innerHTML = '';
 }
+ Calculator
+// show results
 
+
+main
 function showResult() {
     if (previousNumber.innerHTML === '' || currentNumber.innerHTML === '') return;
 
@@ -71,6 +87,11 @@ function addToHistory() {
     newHistoryItem.innerHTML = `$(currentNumber.innerGTML) $(mathSight.innerHTML) $(previousNumber.innerHTML)` = `$(result)`
 }
 
+Calculator
+// clear history
+
+
+main
 function clearHistory() {
     calculatorHistory.textContent = '';
     if (calculatorHistory.textContent === '') {
