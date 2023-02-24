@@ -1,0 +1,20 @@
+* ::before, ::after {
+    padding: 0;;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.display {
+    font-style: normal;
+    height: 60px;
+    width: 60px;
+    color: azure;
+}
+
+.history {
+    list-style: none;
+}
+
+.history-title {
+    padding-bottom: 10px;
+}
