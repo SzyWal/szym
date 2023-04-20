@@ -1,0 +1,184 @@
+:root {
+    --color-bg:#fff;
+    --color-txt:#000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-txt);
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Helvetica, sans-serif;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100vw;
+    padding: 48px 32px;
+    overflow: hidden;
+}
+
+header {
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+input {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+header button {
+    background-color: #000;
+    border-radius: solid 4px #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    height: 100px;
+    outline-width: 5px;
+    position: relative;
+    width: 1px;
+}
+
+.icon {
+    background-color: grey;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: 60px;
+    width: 60px;
+    margin: 16px 25px;
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 60px;
+}
+
+span {
+    bottom: 100%;
+    color: var(--color-txt);
+    font-size: 20px;
+    left: 50%;
+    padding: 12px 0;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+p {
+    font-size: 24px;
+    padding: 12px 0;
+    text-align: left;
+}
+
+main button {
+    background: var(--color-txt);
+    border: solid 0.3vw;
+    color: var(--color-bg);
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+    font-size: 32px;
+    margin: 24px 0px;
+    transition: background 0.3s, color 0.3s;
+    
+}
+
+main button:hover {
+    background: var(--color-txt);
+    color: var(--color-bg);
+}
+
+/* Light Mode */
+body.light {
+    --color-bg: #fff;
+    --color-txt: #000;
+}
+
+body.light .icon {
+    background: grey;
+    transform: translateX(0);
+}
+
+body.light .icon::after {
+   content: none;
+}
+/* Dark Mode */
+
+/* body.dark,
+body.dark main button {
+    background: var(--color-txt);
+    color: #fff;
+}
+
+body.dark main button:hover {
+    background: #fff;
+    color: var(--color-txt);
+} */
+
+body.dark {
+    --color-bg: #000;
+    --color-txt: #fff;
+}
+
+body.dark .icon {
+    background: yellow;
+    transform: translateX(85px);
+}
+
+body.dark .icon::after {
+    background-color: #000;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: 50px;
+    left: -5px;
+    position: absolute;
+    top: 5px;
+    width: 35px;
+}
+
+@media (prefers-color-scheme: dark) {
+        body {
+            --color-bg: #000;
+            --color-txt: #fff;
+        }
+        
+        body .icon {
+            background: yellow;
+            transform: translateX(85px);
+        }
+        
+        body.icon::after {
+            background-color: #000;
+            border-radius: 100%;
+            content: "";
+            display: block;
+            height: 50px;
+            left: -5px;
+            position: absolute;
+            top: 5px;
+            width: 35px;
+        }
+
+};
